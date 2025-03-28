@@ -1,0 +1,122 @@
+/* General Styles */
+.portfolio-manager,
+.add-portfolio-form,
+.edit-portfolio-form {
+  background-color: #f8f9fa; /* Light gray background */
+  border: 1px solid #dee2e6; /* Light gray border */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #343a40; /* Dark gray heading */
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 10px;
+}
+
+/* Portfolio Manager */
+.portfolio-list {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.portfolio-item:last-child {
+  border-bottom: none;
+}
+
+.portfolio-name {
+  font-weight: 600;
+  color: #495057; /* Slightly darker gray */
+}
+
+.portfolio-value {
+  color: #28a745; /* Green for positive value */
+  font-weight: 500;
+}
+
+.portfolio-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-portfolio-btn,
+.delete-portfolio-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.edit-portfolio-btn {
+  color: #007bff; /* Blue for edit */
+}
+
+.delete-portfolio-btn {
+  color: #dc3545; /* Red for delete */
+}
+
+.edit-portfolio-btn:hover,
+.delete-portfolio-btn:hover {
+  background-color: #e9ecef; /* Light gray on hover */
+}
+
+.add-portfolio-btn {
+  background-color: #007bff; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.add-portfolio-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-portfolio-btn {
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-portfolio-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}

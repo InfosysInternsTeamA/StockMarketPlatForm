@@ -1,0 +1,31 @@
+
+      --------------------------------------
+      Error Stack:: "AxiosError: Request failed with status code 401\n    at Le (c:\\Users\\Sharin\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.3.1\\dist\\extension.js:2:168618)\n    at IncomingMessage.<anonymous> (c:\\Users\\Sharin\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.3.1\\dist\\extension.js:2:180488)\n    at c:\\Users\\Sharin\\.vscode\\extensions\\node_modules\\.pnpm\\@opentelemetry+context-async-hooks@1.27.0_@opentelemetry+api@1.7.0\\node_modules\\@opentelemetry\\context-async-hooks\\src\\AbstractAsyncHooksContextManager.ts:75:49\n    at AsyncLocalStorage.run (node:async_hooks:335:14)\n    at AsyncLocalStorageContextManager.with (c:\\Users\\Sharin\\.vscode\\extensions\\node_modules\\.pnpm\\@opentelemetry+context-async-hooks@1.27.0_@opentelemetry+api@1.7.0\\node_modules\\@opentelemetry\\context-async-hooks\\src\\AsyncLocalStorageContextManager.ts:40:36)\n    at IncomingMessage.contextWrapper (c:\\Users\\Sharin\\.vscode\\extensions\\node_modules\\.pnpm\\@opentelemetry+context-async-hooks@1.27.0_@opentelemetry+api@1.7.0\\node_modules\\@opentelemetry\\context-async-hooks\\src\\AbstractAsyncHooksContextManager.ts:75:22)\n    at IncomingMessage.emit (node:events:530:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)"
+      Error Message:: "Request failed with status code 401"
+      Error Name:: "AxiosError"
+      Request ID:: 596012ff-9812-4b85-8d0b-0678811d5d32
+      
+      Env:: release
+      API Route:: /api/v1/copilot/migration_scope
+      API Response Message:: Invalid token
+      API Response Error Type:: unauthorized
+
+      Timestamp:: Mon, 17 Mar 2025 16:24:24 GMT
+      Extension Version:: 2.3.1
+      --------------------------------------
+    
+      --------------------------------------
+      Error Stack:: "Error: Please set up the FDK path to proceed, you can set up the path from settings.\n    at a.FdkHelper.getfdkPathFromConfig (c:\\Users\\Sharin\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.3.1\\dist\\extension.js:2:81459)\n    at a.FdkHelper.runInBackground (c:\\Users\\Sharin\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.3.1\\dist\\extension.js:2:82794)\n    at a.FdkHelper.getFdkVersion (c:\\Users\\Sharin\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.3.1\\dist\\extension.js:2:78609)\n    at m.getFdkVersion (c:\\Users\\Sharin\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.3.1\\dist\\extension.js:2:140513)\n    at m.resolveWebviewView (c:\\Users\\Sharin\\.vscode\\extensions\\freshworksmarketplace.freddy-copilot-2.3.1\\dist\\extension.js:2:120450)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at DW.$resolveWebviewView (file:///c:/Users/Sharin/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:24592)"
+      Error Message:: "Please set up the FDK path to proceed, you can set up the path from settings."
+      Error Name:: "Error"
+      
+      
+      
+      
+      
+      
+
+      Timestamp:: Mon, 17 Mar 2025 16:24:24 GMT
+      Extension Version:: 2.3.1
+      --------------------------------------
+    

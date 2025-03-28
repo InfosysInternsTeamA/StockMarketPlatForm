@@ -1,0 +1,339 @@
+.portfolio-manager-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-manager-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4c00b4;
+}
+
+.add-portfolio-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.add-portfolio-section input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.add-portfolio-section button {
+  background: #4c00b4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-portfolio-section button:hover {
+  background: #6a11cb;
+}
+
+.portfolio-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.portfolio-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.portfolio-item span {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.portfolio-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.portfolio-actions button {
+  background: #f0f2f5;
+  color: #2d3748;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.portfolio-actions button:hover {
+  background: #e2e8f0;
+}
+
+.portfolio-item input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+/* Add any additional styles for PortfolioManager here */
+
+/* Example styles */
+.portfolio-manager {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+  background: #1e293b;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid #334155;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-card:hover {
+  border-color: #4c00b4;
+  transform: translateY(-2px);
+}
+
+.portfolio-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.assets-count {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.portfolio-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.portfolio-actions button {
+  background: none;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.portfolio-actions button:hover {
+  color: #ffffff;
+  border-color: #4c00b4;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.total-value {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.assets-table {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: #0f172a;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 1rem;
+  border-bottom: 1px solid #334155;
+  transition: background 0.2s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.table-row:hover {
+  background: #1a2332;
+}
+
+.asset-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.asset-symbol {
+  font-weight: 600;
+}
+
+.positive {
+  color: #10b981;
+}
+
+.negative {
+  color: #ef4444;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #334155;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: white;
+}
+
+.primary-btn {
+  background: #4c00b4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #6a11cb;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: #0f172a;
+}
+
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 2rem;
+}

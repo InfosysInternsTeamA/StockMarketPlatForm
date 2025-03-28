@@ -1,0 +1,324 @@
+
+/* BuyStocks.css */
+.trading-platform-container {
+  padding: 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #f5f7fa;
+  min-height: 100vh;
+  color: #2d3748;
+  font-family: 'Inter', sans-serif;
+}
+
+.platform-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 1rem; /* Add some gap between items */
+}
+
+.platform-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.exchange-selector,
+.trading-account-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.exchange-selector label,
+.trading-account-selector label {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.exchange-selector select,
+.trading-account-selector select {
+  background: #ffffff;
+  color: #2d3748;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+}
+
+.exchange-selector select:hover,
+.trading-account-selector select:hover {
+  border-color: #a0aec0;
+}
+
+.exchange-selector select:focus,
+.trading-account-selector select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+}
+
+.instrument-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  height: calc(100vh - 160px);
+}
+
+.market-overview {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.market-overview h3 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  color: #1a202c;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+.instrument-list {
+  display: grid;
+  gap: 0.75rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.instrument-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.instrument-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.instrument-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 3px;
+}
+
+.instrument-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.2s;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.instrument-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e0;
+}
+
+.instrument-card.selected {
+  background: #f8fafc;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.1);
+}
+
+.instrument-symbol {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.instrument-name {
+  color: #718096;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.instrument-details {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.instrument-price {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1a202c;
+}
+
+.price-change {
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.price-change.positive {
+  color: #38a169;
+  background: rgba(56, 161, 105, 0.1);
+}
+
+.price-change.negative {
+  color: #e53e3e;
+  background: rgba(229, 62, 62, 0.1);
+}
+
+.trade-button {
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.trade-button:hover {
+  background: #3182ce;
+}
+
+.trading-widget {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.chart-header h3 {
+  font-size: 1.1rem;
+  color: #1a202c;
+  margin: 0;
+}
+
+.chart-header button {
+  background: #4299e1;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-header button:hover {
+  background: #3182ce;
+}
+
+#chart-container {
+  flex: 1;
+  position: relative;
+  min-height: 300px;
+}
+
+.disclaimer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #718096;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.broker-links a {
+  color: #4299e1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.broker-links a:hover {
+  color: #3182ce;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .instrument-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .trading-widget {
+    height: 400px;
+  }
+
+  .platform-header {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .market-overview {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instrument-card {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .instrument-details {
+    text-align: left;
+  }
+
+  .trade-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

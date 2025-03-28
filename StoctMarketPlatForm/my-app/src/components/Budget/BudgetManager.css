@@ -1,0 +1,461 @@
+/* BudgetManager.css */
+
+/* Global box-sizing to prevent layout shifts */
+* {
+  box-sizing: border-box;
+}
+
+/* Main container */
+.budget-manager-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Split into two columns */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  grid-column: 1 / -1; /* Span both columns */
+}
+
+.header-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-buttons button {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-buttons button:hover {
+  background: #2563eb;
+}
+
+.action-buttons button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Forms */
+.add-budget-form,
+.add-expense-form {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: end;
+}
+
+.add-budget-form input,
+.add-expense-form input {
+  padding: 0.625rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.add-budget-form input:focus,
+.add-expense-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.add-budget-form button,
+.add-expense-form button {
+  grid-column: span 2;
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-budget-form button:hover,
+.add-expense-form button:hover {
+  background: #2563eb;
+}
+
+/* Budget List */
+.budget-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  grid-column: 1;
+  order: 1;
+  align-items: start; /* Ensure items align at the top */
+}
+
+.budget-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+  border: 2px solid transparent;
+  min-height: 120px; /* Standardize height for alignment */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Consistent internal spacing */
+}
+
+.budget-item.selected {
+  border-color: #3b82f6;
+  background: #f0f4ff;
+}
+
+.budget-item:hover {
+  transform: translateY(-2px);
+}
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.budget-header span {
+  font-weight: 500;
+  color: #1e293b;
+  font-size: 1.125rem;
+}
+
+.budget-header input {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%; /* Ensure input takes full available space */
+}
+
+.budget-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.budget-actions button {
+  color: #64748b;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.budget-actions button:hover {
+  color: #3b82f6;
+  background: #e2e8f0;
+}
+
+.progress-bar {
+  background: #e2e8f0;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.progress {
+  background: #3b82f6;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Tables */
+.expense-table {
+  width: 100%;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.expense-table th,
+.expense-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.expense-table th {
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.expense-table td {
+  color: #1e293b;
+  font-size: 0.875rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.expense-table tr:hover td {
+  background: #f8fafc;
+}
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.rows-per-page select {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #cbd5e1;
+}
+
+.page-buttons button {
+  color: #64748b;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-buttons button:hover {
+  color: #3b82f6;
+  background: #e2e8f0;
+}
+
+.page-buttons button:disabled {
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Error and Loading States */
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1.5rem;
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(2px);
+}
+
+/* Form Validation */
+.warning-text {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  grid-column: span 2;
+}
+
+.invalid-input {
+  border-color: #dc2626 !important;
+}
+
+.invalid-input:focus {
+  box-shadow: 0 0 0 1px #dc2626 !important;
+}
+
+/* Left Column */
+.total-expense-section {
+  grid-column: 1;
+  order: 2; /* Place below budgets in left column */
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Column */
+.selected-budget-section {
+  grid-column: 2;
+  position: sticky;
+  top: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .budget-manager-container {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-budget-section {
+    grid-column: 1;
+    position: static;
+  }
+
+  .total-expense-section {
+    order: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-budget-form,
+  .add-expense-form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-budget-form button,
+  .add-expense-form button {
+    grid-column: span 1;
+  }
+
+  .budget-list {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+/* BudgetManager.css */
+* {
+  box-sizing: border-box;
+}
+
+.budget-manager-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right-column {
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+}
+
+.budget-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.budget-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.selected-budget-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.total-expense-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep all other styles the same as original, but remove:
+   - grid-column properties from individual components
+   - position: sticky from original selected-budget-section
+   - redundant alignment properties */
+
+@media (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .right-column {
+    position: static;
+    order: -1;
+  }
+}
